@@ -19,37 +19,77 @@ React applications.
 
 ## Folder Layout
 
-src/
-└── js
-    ├── clientApp.js
-    ├── middleware
-    │   └── localizer.js
-    ├── modules
-    │   ├── RoutingApp.js
-    │   ├── core
-    │   │   ├── actionTypes.js
-    │   │   ├── actions.js
-    │   │   ├── components
-    │   │   │   └── MainApp.js
-    │   │   ├── constants.js
-    │   │   ├── index.js
-    │   │   └── reducer.js
-    │   └── index.js
-    ├── reducers.js
-    ├── store.js
-    ├── strings
-    │   ├── en
-    │   │   ├── en-menus.js
-    │   │   └── index.js
-    │   ├── es
-    │   │   ├── es-menus.js
-    │   │   └── index.js
-    │   ├── global.js
-    │   └── index.js
-git a    ├── tools
-    │   ├── appHistory.js
-    │   └── localizationSetter.js
-    └── versionInfo.js
+|-- cs_projects
+    |-- .gitignore
+    |-- CONTRIBUTING.md
+    |-- GETTING_STARTED.md
+    |-- README.md
+    |-- ROADMAP.md
+    |-- greedux_logo.png
+    |-- package-lock.json
+    |-- package.json
+    |-- app
+        |-- index.js
+        |-- package.json
+        |-- templates
+            |-- _gitignore
+            |-- app.js
+            |-- gulpfile.js
+            |-- package.json
+            |-- build-config
+            |   |-- README.md
+            |   |-- aliases.json
+            |   |-- paths.json
+            |-- dist
+            |   |-- dev
+            |       |-- index.html
+            |       |-- css
+            |       |   |-- main-index.css
+            |       |   |-- roboto.css
+            |       |-- fonts
+            |           |-- Roboto-Black.ttf
+            |           |-- Roboto-BlackItalic.ttf
+            |           |-- Roboto-Bold.ttf
+            |           |-- Roboto-BoldItalic.ttf
+            |           |-- Roboto-Italic.ttf
+            |           |-- Roboto-Light.ttf
+            |           |-- Roboto-LightItalic.ttf
+            |           |-- Roboto-Medium.ttf
+            |           |-- Roboto-MediumItalic.ttf
+            |           |-- Roboto-Regular.ttf
+            |           |-- Roboto-Thin.ttf
+            |           |-- Roboto-ThinItalic.ttf
+            |-- src
+                |-- js
+                    |-- clientApp.js
+                    |-- reducers.js
+                    |-- store.js
+                    |-- versionInfo.js
+                    |-- middleware
+                    |   |-- localizer.js
+                    |-- modules
+                    |   |-- RoutingApp.js
+                    |   |-- index.js
+                    |   |-- core
+                    |       |-- actionTypes.js
+                    |       |-- actions.js
+                    |       |-- constants.js
+                    |       |-- index.js
+                    |       |-- reducer.js
+                    |       |-- components
+                    |           |-- MainApp.js
+                    |-- strings
+                    |   |-- global.js
+                    |   |-- index.js
+                    |   |-- en
+                    |   |   |-- en-menus.js
+                    |   |   |-- index.js
+                    |   |-- es
+                    |       |-- es-menus.js
+                    |       |-- index.js
+                    |-- tools
+                        |-- appHistory.js
+                        |-- localizationSetter.js
 
 
 Greedux is centered around modules. Modules hold both Redux state
