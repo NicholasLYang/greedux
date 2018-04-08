@@ -7,27 +7,6 @@ import { refreshWindowDimensions } from './../actions'
 
 const styles =
 {
-    appWrapper :
-    {
-        minHeight       : '100%',
-        margin          : '0px auto',
-        display         : 'flex',
-        flexDirection   : 'row'
-    },
-    mainWrapper :
-    {
-        minHeight       : '100%',
-        margin          : '0px auto',
-        display         : 'flex',
-        flexDirection   : 'column',
-        flex            : '1 0 auto'
-    },
-    contentWrapper :
-    {
-        maxWidth : '720px',
-        minWidth : '360px',
-        margin   : '0 auto'
-    },
     mainContainer :
     {
         display        : 'flex',
@@ -36,17 +15,6 @@ const styles =
         flex           : '1 0 auto',
         flexDirection  : 'column'
     },
-    mainContent :
-    {
-        flexDirection : 'column',
-        display       : 'flex',
-        flex          : '1 0 auto'
-    },
-    appFooter :
-    {
-        height    : '40px',
-        textAlign : 'center'
-    }
 };
 
 
@@ -73,18 +41,9 @@ class MainApp extends PureComponent
         const { classes } = this.props;
 
         return (
-                <div className={classes.appWrapper}>
-                    <div className={classes.mainWrapper}>
-                        <div className={classes.mainContent}>
-                            <div className={classes.mainContainer}>
-                                Hello new React/Redux App!
-                            </div>
-                        </div>
-                        <div className={classes.appFooter}>
-                            Footer content goes here
-                        </div>
-                    </div>
-                </div>
+            <div className={classes.mainContainer}>
+                Hello new React/Redux App!
+            </div>
         );
     }
 }
