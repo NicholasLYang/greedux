@@ -19,6 +19,8 @@ React applications.
 
 ## Folder Layout
 
+### Master Layout
+
 ```
 .
 |-- ./app.js
@@ -29,21 +31,7 @@ React applications.
 |-- ./dist
 |   |-- ./dist/dev
 |   |   |-- ./dist/dev/css
-|   |   |   |-- ./dist/dev/css/main-index.css
-|   |   |   |-- ./dist/dev/css/roboto.css
 |   |   |-- ./dist/dev/fonts
-|   |   |   |-- ./dist/dev/fonts/Roboto-Black.ttf
-|   |   |   |-- ./dist/dev/fonts/Roboto-BlackItalic.ttf
-|   |   |   |-- ./dist/dev/fonts/Roboto-Bold.ttf
-|   |   |   |-- ./dist/dev/fonts/Roboto-BoldItalic.ttf
-|   |   |   |-- ./dist/dev/fonts/Roboto-Italic.ttf
-|   |   |   |-- ./dist/dev/fonts/Roboto-Light.ttf
-|   |   |   |-- ./dist/dev/fonts/Roboto-LightItalic.ttf
-|   |   |   |-- ./dist/dev/fonts/Roboto-Medium.ttf
-|   |   |   |-- ./dist/dev/fonts/Roboto-MediumItalic.ttf
-|   |   |   |-- ./dist/dev/fonts/Roboto-Regular.ttf
-|   |   |   |-- ./dist/dev/fonts/Roboto-Thin.ttf
-|   |   |   |-- ./dist/dev/fonts/Roboto-ThinItalic.ttf
 |   |   |-- ./dist/dev/index.html
 |   |-- ./dist/prod
 |-- ./gulpfile.js
@@ -66,23 +54,58 @@ React applications.
 |       |-- ./src/js/reducers.js
 |       |-- ./src/js/store.js
 |       |-- ./src/js/strings
-|       |   |-- ./src/js/strings/en
-|       |   |   |-- ./src/js/strings/en/en-menus.js
-|       |   |   |-- ./src/js/strings/en/index.js
-|       |   |-- ./src/js/strings/es
-|       |   |   |-- ./src/js/strings/es/es-menus.js
-|       |   |   |-- ./src/js/strings/es/index.js
-|       |   |-- ./src/js/strings/global.js
-|       |   |-- ./src/js/strings/index.js
 |       |-- ./src/js/tools
-|       |   |-- ./src/js/tools/appHistory.js
-|       |   |-- ./src/js/tools/localizationSetter.js
 |       |-- ./src/js/versionInfo.js
 |-- ./package-lock.json
 |-- ./package.json
 |-- ./README.md
 ```
 
-Greedux is centered around modules. Modules hold both Redux state
-slices (with corresponding actions and reducers) and the relevant
-React components.
+### src/js
+
+```
+.
+|-- ./clientApp.js
+|-- ./middleware
+|   |-- ./middleware/localizer.js
+|-- ./modules
+|   |-- ./modules/RoutingApp.js
+|   |-- ./modules/core
+|   |   |-- ./modules/core/actionTypes.js
+|   |   |-- ./modules/core/actions.js
+|   |   |-- ./modules/core/components
+|   |   |   |-- ./modules/core/components/MainApp.js
+|   |   |-- ./modules/core/constants.js
+|   |   |-- ./modules/core/index.js
+|   |   |-- ./modules/core/reducer.js
+|   |-- ./modules/index.js
+|-- ./reducers.js
+|-- ./store.js
+|-- ./strings
+|   |-- ./strings/en
+|   |   |-- ./strings/en/en-menus.js
+|   |   |-- ./strings/en/index.js
+|   |-- ./strings/es
+|   |   |-- ./strings/es/es-menus.js
+|   |   |-- ./strings/es/index.js
+|   |-- ./strings/global.js
+|   |-- ./strings/index.js
+|-- ./tools
+|   |-- ./tools/appHistory.js
+|   |-- ./tools/localizationSetter.js
+|-- ./versionInfo.js
+```
+
+All of the code goes into `src/js`. The main entrypoint to the code is
+`clientApp.js`. clientApp renders your React root while also printing
+out the version number.
+
+`middleware` is where custom Redux middleware is stored. As an
+example, we have provided a localizer middleware in `localizer.js`.
+
+`modules` is for (duh) modules. Greedux is centered around
+modules. Modules hold both Redux state slices (with corresponding
+actions and reducers) and the relevant React components. They allow
+for reusable and well organized code.
+
+
