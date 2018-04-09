@@ -19,148 +19,69 @@ React applications.
 
 ## Folder Layout
 
-|-- cs_projects
-
-    |-- .gitignore
-    
-    |-- CONTRIBUTING.md
-    
-    |-- GETTING_STARTED.md
-    
-    |-- README.md
-    
-    |-- ROADMAP.md
-    
-    |-- greedux_logo.png
-    
-    |-- package-lock.json
-    
-    |-- package.json
-    
-    |-- app
-    
-        |-- index.js
-	
-        |-- package.json
-	
-        |-- templates
-	
-            |-- _gitignore
-	    
-            |-- app.js
-	    
-            |-- gulpfile.js
-	    
-            |-- package.json
-	    
-            |-- build-config
-	    
-            |   |-- README.md
-	    
-            |   |-- aliases.json
-	    
-            |   |-- paths.json
-            |-- dist
-
-            |   |-- dev
-
-            |       |-- index.html
-
-            |       |-- css
-
-            |       |   |-- main-index.css
-
-            |       |   |-- roboto.css
-
-            |       |-- fonts
-
-            |           |-- Roboto-Black.ttf
-
-            |           |-- Roboto-BlackItalic.ttf
-
-            |           |-- Roboto-Bold.ttf
-
-            |           |-- Roboto-BoldItalic.ttf
-
-            |           |-- Roboto-Italic.ttf
-
-            |           |-- Roboto-Light.ttf
-
-            |           |-- Roboto-LightItalic.ttf
-
-            |           |-- Roboto-Medium.ttf
-
-            |           |-- Roboto-MediumItalic.ttf
-
-            |           |-- Roboto-Regular.ttf
-
-            |           |-- Roboto-Thin.ttf
-
-            |           |-- Roboto-ThinItalic.ttf
-
-            |-- src
-
-                |-- js
-
-                    |-- clientApp.js
-
-                    |-- reducers.js
-
-                    |-- store.js
-
-                    |-- versionInfo.js
-
-                    |-- middleware
-
-                    |   |-- localizer.js
-
-                    |-- modules
-
-                    |   |-- RoutingApp.js
-
-                    |   |-- index.js
-
-                    |   |-- core
-
-                    |       |-- actionTypes.js
-
-                    |       |-- actions.js
-
-                    |       |-- constants.js
-
-                    |       |-- index.js
-
-                    |       |-- reducer.js
-
-                    |       |-- components
-
-                    |           |-- MainApp.js
-
-                    |-- strings
-
-                    |   |-- global.js
-
-                    |   |-- index.js
-
-                    |   |-- en
-
-                    |   |   |-- en-menus.js
-
-                    |   |   |-- index.js
-
-                    |   |-- es
-
-                    |       |-- es-menus.js
-
-                    |       |-- index.js
-
-                    |-- tools
-
-                        |-- appHistory.js
-
-                        |-- localizationSetter.js
-
-
+```
+.
+|-- ./app.js
+|-- ./build-config
+|   |-- ./build-config/README.md
+|   |-- ./build-config/aliases.json
+|   `-- ./build-config/paths.json
+|-- ./dist
+|   |-- ./dist/dev
+|   |   |-- ./dist/dev/css
+|   |   |   |-- ./dist/dev/css/main-index.css
+|   |   |   `-- ./dist/dev/css/roboto.css
+|   |   |-- ./dist/dev/fonts
+|   |   |   |-- ./dist/dev/fonts/Roboto-Black.ttf
+|   |   |   |-- ./dist/dev/fonts/Roboto-BlackItalic.ttf
+|   |   |   |-- ./dist/dev/fonts/Roboto-Bold.ttf
+|   |   |   |-- ./dist/dev/fonts/Roboto-BoldItalic.ttf
+|   |   |   |-- ./dist/dev/fonts/Roboto-Italic.ttf
+|   |   |   |-- ./dist/dev/fonts/Roboto-Light.ttf
+|   |   |   |-- ./dist/dev/fonts/Roboto-LightItalic.ttf
+|   |   |   |-- ./dist/dev/fonts/Roboto-Medium.ttf
+|   |   |   |-- ./dist/dev/fonts/Roboto-MediumItalic.ttf
+|   |   |   |-- ./dist/dev/fonts/Roboto-Regular.ttf
+|   |   |   |-- ./dist/dev/fonts/Roboto-Thin.ttf
+|   |   |   `-- ./dist/dev/fonts/Roboto-ThinItalic.ttf
+|   |   `-- ./dist/dev/index.html
+|   `-- ./dist/prod
+|-- ./gulpfile.js
+|-- ./src
+|   `-- ./src/js
+|       |-- ./src/js/clientApp.js
+|       |-- ./src/js/middleware
+|       |   `-- ./src/js/middleware/localizer.js
+|       |-- ./src/js/modules
+|       |   |-- ./src/js/modules/RoutingApp.js
+|       |   |-- ./src/js/modules/core
+|       |   |   |-- ./src/js/modules/core/actionTypes.js
+|       |   |   |-- ./src/js/modules/core/actions.js
+|       |   |   |-- ./src/js/modules/core/components
+|       |   |   |   `-- ./src/js/modules/core/components/MainApp.js
+|       |   |   |-- ./src/js/modules/core/constants.js
+|       |   |   |-- ./src/js/modules/core/index.js
+|       |   |   `-- ./src/js/modules/core/reducer.js
+|       |   `-- ./src/js/modules/index.js
+|       |-- ./src/js/reducers.js
+|       |-- ./src/js/store.js
+|       |-- ./src/js/strings
+|       |   |-- ./src/js/strings/en
+|       |   |   |-- ./src/js/strings/en/en-menus.js
+|       |   |   `-- ./src/js/strings/en/index.js
+|       |   |-- ./src/js/strings/es
+|       |   |   |-- ./src/js/strings/es/es-menus.js
+|       |   |   `-- ./src/js/strings/es/index.js
+|       |   |-- ./src/js/strings/global.js
+|       |   `-- ./src/js/strings/index.js
+|       |-- ./src/js/tools
+|       |   |-- ./src/js/tools/appHistory.js
+|       |   `-- ./src/js/tools/localizationSetter.js
+|       `-- ./src/js/versionInfo.js
+|-- ./package-lock.json
+|-- ./package.json
+|-- ./README.md
+```
 
 Greedux is centered around modules. Modules hold both Redux state
 slices (with corresponding actions and reducers) and the relevant
