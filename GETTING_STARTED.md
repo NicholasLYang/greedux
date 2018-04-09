@@ -25,12 +25,12 @@ React applications.
 |-- ./build-config
 |   |-- ./build-config/README.md
 |   |-- ./build-config/aliases.json
-|   `-- ./build-config/paths.json
+|   |-- ./build-config/paths.json
 |-- ./dist
 |   |-- ./dist/dev
 |   |   |-- ./dist/dev/css
 |   |   |   |-- ./dist/dev/css/main-index.css
-|   |   |   `-- ./dist/dev/css/roboto.css
+|   |   |   |-- ./dist/dev/css/roboto.css
 |   |   |-- ./dist/dev/fonts
 |   |   |   |-- ./dist/dev/fonts/Roboto-Black.ttf
 |   |   |   |-- ./dist/dev/fonts/Roboto-BlackItalic.ttf
@@ -43,41 +43,41 @@ React applications.
 |   |   |   |-- ./dist/dev/fonts/Roboto-MediumItalic.ttf
 |   |   |   |-- ./dist/dev/fonts/Roboto-Regular.ttf
 |   |   |   |-- ./dist/dev/fonts/Roboto-Thin.ttf
-|   |   |   `-- ./dist/dev/fonts/Roboto-ThinItalic.ttf
-|   |   `-- ./dist/dev/index.html
-|   `-- ./dist/prod
+|   |   |   |-- ./dist/dev/fonts/Roboto-ThinItalic.ttf
+|   |   |-- ./dist/dev/index.html
+|   |-- ./dist/prod
 |-- ./gulpfile.js
 |-- ./src
-|   `-- ./src/js
+|   |-- ./src/js
 |       |-- ./src/js/clientApp.js
 |       |-- ./src/js/middleware
-|       |   `-- ./src/js/middleware/localizer.js
+|       |   |-- ./src/js/middleware/localizer.js
 |       |-- ./src/js/modules
 |       |   |-- ./src/js/modules/RoutingApp.js
 |       |   |-- ./src/js/modules/core
 |       |   |   |-- ./src/js/modules/core/actionTypes.js
 |       |   |   |-- ./src/js/modules/core/actions.js
 |       |   |   |-- ./src/js/modules/core/components
-|       |   |   |   `-- ./src/js/modules/core/components/MainApp.js
+|       |   |   |   |-- ./src/js/modules/core/components/MainApp.js
 |       |   |   |-- ./src/js/modules/core/constants.js
 |       |   |   |-- ./src/js/modules/core/index.js
-|       |   |   `-- ./src/js/modules/core/reducer.js
-|       |   `-- ./src/js/modules/index.js
+|       |   |   |-- ./src/js/modules/core/reducer.js
+|       |   |-- ./src/js/modules/index.js
 |       |-- ./src/js/reducers.js
 |       |-- ./src/js/store.js
 |       |-- ./src/js/strings
 |       |   |-- ./src/js/strings/en
 |       |   |   |-- ./src/js/strings/en/en-menus.js
-|       |   |   `-- ./src/js/strings/en/index.js
+|       |   |   |-- ./src/js/strings/en/index.js
 |       |   |-- ./src/js/strings/es
 |       |   |   |-- ./src/js/strings/es/es-menus.js
-|       |   |   `-- ./src/js/strings/es/index.js
+|       |   |   |-- ./src/js/strings/es/index.js
 |       |   |-- ./src/js/strings/global.js
-|       |   `-- ./src/js/strings/index.js
+|       |   |-- ./src/js/strings/index.js
 |       |-- ./src/js/tools
 |       |   |-- ./src/js/tools/appHistory.js
-|       |   `-- ./src/js/tools/localizationSetter.js
-|       `-- ./src/js/versionInfo.js
+|       |   |-- ./src/js/tools/localizationSetter.js
+|       |-- ./src/js/versionInfo.js
 |-- ./package-lock.json
 |-- ./package.json
 |-- ./README.md
