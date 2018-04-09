@@ -30,7 +30,7 @@ A modular, clean and scalable modern workflow template for React/Redux developme
 ## Deployment ##
 
 ### Packaging the app ###
-simply run `gulp build` , and your server and assets are ready to go.
+Simply run `gulp build` , and your server and assets are ready to go.
 
 #### Optional Flags ####
 - **success_notice**  : Display an OS-level success notice
@@ -59,7 +59,7 @@ Currently, hot reloading only detects JS changes so server must be reset for oth
 
 If you would like to run without a hot reload server in dev mode, static changes can be detected when refreshing
 without re-running the dev server . simply run `gulp dev` and then in another console `node app --dev` 
-(port can be specified as param but default is `3002`).
+(port can be specified as param but default is `3002`). Or run `npm run dev` in one console.
 
 #### Optional Flags ###
 
